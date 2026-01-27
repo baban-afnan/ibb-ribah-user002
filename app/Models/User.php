@@ -91,4 +91,12 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Transaction::class);
     }
+
+    /**
+     * Relationship: A user has one virtual account
+     */
+    public function virtualAccount()
+    {
+        return $this->hasOne(VirtualAccount::class);
+    }
 }
