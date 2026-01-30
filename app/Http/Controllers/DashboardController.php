@@ -64,7 +64,7 @@ class DashboardController extends Controller
         $recentTransactions = Transaction::with('user')
             ->whereBetween('created_at', [$startDate, $endDate])
             ->orderBy('created_at', 'desc')
-            ->take(20) // Increased to show more for the daily view
+            ->take(10) // Increased to show more for the daily view
             ->get();
 
         // 6. Transaction Statistics (Filtered by Date)
