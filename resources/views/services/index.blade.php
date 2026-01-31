@@ -1,5 +1,5 @@
 <x-app-layout>
-      <title>Smart Idea - Services Management</title>
+      <title>Safana Digital - Services Management</title>
 
     <div class="content">
         <!-- Page Header -->

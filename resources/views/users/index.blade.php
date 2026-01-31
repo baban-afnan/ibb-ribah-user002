@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Arewa Smart - User Management</title>
+    <title>Safana Digital - User Management</title>
 
     <div class="content">
 

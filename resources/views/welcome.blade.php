@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Idea - Admin Dashboard</title>
+    <title>Safana Digital - Admin Dashboard</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Outfit -->
@@ -13,9 +13,9 @@
     
     <style>
         :root {
-            --primary-gradient: linear-gradient(135deg, #00A36C 0%, #007D48 100%);
+            --primary-gradient: linear-gradient(135deg, #002fba 0%, #002fba 100%);
             --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(135, 129, 224, 0.1);
             --text-color: #ffffff;
             --text-secondary: #d1f7e8;
         }
@@ -36,7 +36,7 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            background-color: #002d1a; /* Dark green fallback */
+            background-color: #002fba; /* Dark green fallback */
             position: relative;
             overflow: hidden;
         }
@@ -76,7 +76,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('assets/images/logo/hero.png');
+            background-image: url('assets/images/logo/hero.webp');
             background-size: cover;
             background-position: center;
             opacity: 0.6;
@@ -94,7 +94,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0, 125, 72, 0.9) 0%, rgba(0, 77, 44, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(88, 86, 228, 0.9) 0%, rgba(0, 77, 44, 0.8) 100%);
             mix-blend-mode: multiply;
             z-index: 2;
         }
@@ -224,7 +224,7 @@
 
         .login-btn {
             background: #fff;
-            color: #007D48; /* Updated to brand green */
+            color: #002fba; /* Updated to brand green */
             border: none;
             padding: 1rem 3rem;
             font-size: 1.1rem;
@@ -310,7 +310,7 @@
         <div class="overlay-gradient"></div>
         
         <div class="loader-content">
-            <h1 class="loader-title">Smart Idea</h1>
+            <h1 class="loader-title">Welcome - Safana</h1>
             
             <div class="encouragement-text" id="encouragement-text">
                 Initializing safe environment...

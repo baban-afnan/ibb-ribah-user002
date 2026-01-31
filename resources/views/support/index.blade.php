@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Arewa Smart - Support Center</title>
+    <title>Safana Digital - Support Center</title>
 
     <div class="page-body">
         <div class="container-fluid">

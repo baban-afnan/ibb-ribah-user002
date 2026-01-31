@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Arewa Smart - Edit User</title>
+    <title>Safana Digital - Edit User</title>
 
     <div class="content">
         <!-- Page Header -->
