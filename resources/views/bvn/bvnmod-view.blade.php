@@ -1,5 +1,5 @@
 <x-app-layout>
-      <title>Imam Data Sub - BVN Modifications</title>
+      <title>Biometric Digital ID - BVN Modifications</title>
 
     <div class="content">
         <div class="row mb-4">

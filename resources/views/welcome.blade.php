@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safana Digital - Admin Dashboard</title>
+    <title>Biometric Digital ID - Admin Dashboard</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Outfit -->
@@ -32,7 +32,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('assets/img/bg/card-bg.png');
+            background-image: url('assets/images/logo/hero.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -76,7 +76,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('assets/images/logo/hero.webp');
+            background-image: url('assets/images/logo/hero.jpg');
             background-size: cover;
             background-position: center;
             opacity: 0.6;
@@ -310,7 +310,7 @@
         <div class="overlay-gradient"></div>
         
         <div class="loader-content">
-            <h1 class="loader-title">Welcome - Safana</h1>
+            <h1 class="loader-title">Welcome - Biometric ID</h1>
             
             <div class="encouragement-text" id="encouragement-text">
                 Initializing safe environment...

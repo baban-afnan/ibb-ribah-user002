@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Safana Digital - NIN - IPE details</title>
+    <title>Biometric Digital ID - NIN - IPE details</title>
 
     <div class="content">
         <div class="row mb-4">

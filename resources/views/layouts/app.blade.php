@@ -104,7 +104,7 @@
                         <div class="col-md-5 text-center text-md-start mb-2 mb-md-0">
                             <p class="mb-0 small">
                                 © <script>document.write(new Date().getFullYear())</script> 
-                                <strong class="text-white"> Smart Link Idea </strong>. 
+                                <strong class="text-white"> Biometric Digital ID </strong>. 
                                 All Rights Reserved.
                             </p>
                         </div>

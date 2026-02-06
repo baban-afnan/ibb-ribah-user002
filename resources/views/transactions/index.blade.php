@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Safana Digital - Transactions</title>
+    <title>Biometric Digital ID - Transactions</title>
 
     <div class="content">
         <!-- Stats Cards -->

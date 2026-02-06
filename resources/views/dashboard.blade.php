@@ -1,5 +1,5 @@
 <x-app-layout>
-    <title>Safana Digital - {{ $title ?? 'Dashboard' }}</title>
+    <title>Biometric Digital ID - {{ $title ?? 'Dashboard' }}</title>
 
     <!-- Announcement Banner -->
     @if(isset($announcement) && $announcement)
@@ -60,75 +60,124 @@
         @include('pages.alart')
 
         <!-- Statistics Cards -->
-        <div class="row g-4 mb-4">
-            <!-- Total Wallet Balance (Total Volume) -->
-            <div class="col-xl-3 col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 stat-card card-gradient-purple">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <p class="stat-title">Wallet Balance</p>
-                                <h4 class="stat-value">₦{{ number_format($totalWalletBalance, 2) }}</h4>
-                            </div>
-                            <div class="icon-container">
-                                <i class="ti ti-wallet"></i>
-                            </div>
+        <div class="row g-3 mb-4">
+            <!-- Total Wallet Balance -->
+            <div class="col-xl-3 col-md-6 fade-in-up" style="animation-delay: 0.1s;">
+                <div class="financial-card shadow-sm h-100 p-4" style="background: var(--primary-gradient);">
+                    <div class="d-flex justify-content-between align-items-start position-relative z-1">
+                        <div>
+                            <p class="stats-label mb-1" style="color: white;">Wallet Balance</p>
+                            <h3 class="stats-value mb-0">₦{{ number_format($totalWalletBalance, 2) }}</h3>
+                            <small class="text-white-50 fs-12 fw-medium">Total available balance</small>
+                        </div>
+                        <div class="avatar avatar-lg bg-white bg-opacity-25 rounded-3">
+                            <i class="ti ti-wallet fs-24 text-white"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Today's Credit -->
-            <div class="col-xl-3 col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 stat-card card-gradient-green">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <p class="stat-title">Today's Credit</p>
-                                <h4 class="stat-value">₦{{ number_format($dailyCredit, 2) }}</h4>
-                            </div>
-                            <div class="icon-container">
-                                <i class="ti ti-arrow-down-left"></i>
-                            </div>
+            <div class="col-xl-3 col-md-6 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="financial-card shadow-sm h-100 p-4" style="background: var(--success-gradient);">
+                    <div class="d-flex justify-content-between align-items-start position-relative z-1">
+                        <div>
+                            <p class="stats-label mb-1" style="color: white;">Today's Credit</p>
+                            <h3 class="stats-value mb-0">₦{{ number_format($dailyCredit, 2) }}</h3>
+                            <small class="text-white-50 fs-12 fw-medium">Incoming transactions today</small>
+                        </div>
+                        <div class="avatar avatar-lg bg-white bg-opacity-25 rounded-3">
+                            <i class="ti ti-arrow-down-left fs-24 text-white"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Today's Debit -->
-            <div class="col-xl-3 col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 stat-card card-gradient-red">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <p class="stat-title">Today's Debit</p>
-                                <h4 class="stat-value">₦{{ number_format($dailyDebit, 2) }}</h4>
-                            </div>
-                            <div class="icon-container">
-                                <i class="ti ti-arrow-up"></i>
-                            </div>
+            <div class="col-xl-3 col-md-6 fade-in-up" style="animation-delay: 0.3s;">
+                <div class="financial-card shadow-sm h-100 p-4" style="background: var(--danger-gradient);">
+                    <div class="d-flex justify-content-between align-items-start position-relative z-1">
+                        <div>
+                            <p class="stats-label mb-1" style="color: white;">Today's Debit</p>
+                            <h3 class="stats-value mb-0">₦{{ number_format($dailyDebit, 2) }}</h3>
+                            <small class="text-white-50 fs-12 fw-medium">Outgoing transactions today</small>
+                        </div>
+                        <div class="avatar avatar-lg bg-white bg-opacity-25 rounded-3">
+                            <i class="ti ti-arrow-up fs-24 text-white"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Total Users -->
-            <div class="col-xl-3 col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 stat-card card-gradient-blue">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <p class="stat-title">Total Users</p>
-                                <h4 class="stat-value">{{ number_format($totalUsers) }}</h4>
-                            </div>
-                            <div class="icon-container">
-                                <i class="ti ti-users"></i>
-                            </div>
+            <div class="col-xl-3 col-md-6 fade-in-up" style="animation-delay: 0.4s;">
+                <div class="financial-card shadow-sm h-100 p-4" style="background: var(--info-gradient);">
+                    <div class="d-flex justify-content-between align-items-start position-relative z-1">
+                        <div>
+                            <p class="stats-label mb-1" style="color: white;">Total Users</p>
+                            <h3 class="stats-value mb-0">{{ number_format($totalUsers) }}</h3>
+                            <small class="text-white-50 fs-12 fw-medium">Registered users</small>
+                        </div>
+                        <div class="avatar avatar-lg bg-white bg-opacity-25 rounded-3">
+                            <i class="ti ti-users fs-24 text-white"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <style>
+            :root {
+                --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+                --success-gradient: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+                --info-gradient: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+                --warning-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                --danger-gradient: linear-gradient(135deg, #ef4444 0%, #f43f5e 100%);
+            }
+
+            .financial-card {
+                position: relative;
+                overflow: hidden;
+                border: none;
+                border-radius: 1rem;
+                color: white;
+            }
+            .financial-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 150px;
+                height: 150px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                transform: translate(30%, -30%);
+            }
+            .financial-card::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                transform: translate(-30%, 30%);
+            }
+            
+            .stats-label { font-size: 0.875rem; font-weight: 500; opacity: 0.9; }
+            .stats-value { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .fade-in-up {
+                animation: fadeIn 0.5s ease-out forwards;
+            }
+            
+            .avatar-lg { width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; }
+        </style>
 
        
 

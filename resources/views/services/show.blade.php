@@ -1,5 +1,5 @@
 <x-app-layout>
-   <title>Safana Digital - Services Management</title>
+   <title>Biometric Digital ID - Services Management</title>
 
     <div class="content">
         <!-- Page Header -->

@@ -1,5 +1,5 @@
 <x-app-layout>
-    @section('title', 'Imam Data Sub - Fund/Debit User')
+    @section('title', 'Biometric Digital ID - Fund/Debit User')
 
     <div class="content">
         {{-- Success Message --}}

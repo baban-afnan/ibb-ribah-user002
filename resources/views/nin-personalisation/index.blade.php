@@ -1,5 +1,5 @@
 <x-app-layout>
- <title>Safana Digital - NIN Personalisation</title>
+ <title>Biometric Digital ID - NIN Personalisation</title>
       <div class="page-body">
     <div class="container-fluid">
       <div class="page-title">
