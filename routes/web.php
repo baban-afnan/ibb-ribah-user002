@@ -138,6 +138,15 @@ Route::middleware(['auth', 'verified', 'admin'])->group(function () {
             Route::put('/{id}', [\App\Http\Controllers\Agency\NinPersonalisationController::class, 'update'])->name('update');
         });
 
+        // First Account Opening
+        Route::prefix('first-account')->name('first-account.')->group(function () {
+            Route::get('/', [\App\Http\Controllers\Agency\FirstAccountController::class, 'index'])->name('index');
+            Route::get('/export-csv', [\App\Http\Controllers\Agency\FirstAccountController::class, 'exportCsv'])->name('export-csv');
+            Route::get('/export-excel', [\App\Http\Controllers\Agency\FirstAccountController::class, 'exportExcel'])->name('export-excel');
+            Route::get('/{id}', [\App\Http\Controllers\Agency\FirstAccountController::class, 'show'])->name('show');
+            Route::put('/{id}', [\App\Http\Controllers\Agency\FirstAccountController::class, 'update'])->name('update');
+        });
+
         // Validation
         Route::prefix('validation')->name('validation.')->group(function () {
             Route::get('/', [\App\Http\Controllers\Agency\ValidationController::class, 'index'])->name('index');
@@ -171,6 +180,13 @@ Route::middleware(['auth', 'verified', 'admin'])->group(function () {
         Route::post('/', [\App\Http\Controllers\Admin\DataVariationController::class, 'store'])->name('store');
         Route::put('/{dataVariation}', [\App\Http\Controllers\Admin\DataVariationController::class, 'update'])->name('update');
         Route::delete('/{dataVariation}', [\App\Http\Controllers\Admin\DataVariationController::class, 'destroy'])->name('destroy');
+    });
+
+      // SME Data Management
+    Route::prefix('admin/sme-data')->name('admin.sme-data.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\SmeDataController::class, 'index'])->name('index');
+        Route::post('/sync', [\App\Http\Controllers\Admin\SmeDataController::class, 'sync'])->name('sync');
+        Route::put('/{smeData}/update', [\App\Http\Controllers\Admin\SmeDataController::class, 'update'])->name('update');
     });
 });
 

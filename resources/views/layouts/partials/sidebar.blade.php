@@ -52,7 +52,7 @@
                           <a href="{{ route('admin.services.index') }}" class="{{ request()->routeIs('admin.services.*') ? 'active' : '' }}">Services</a>
                         </li>
                         <li><a href="{{ route('admin.data-variations.index') }}" class="{{ request()->routeIs('admin.data-variations.*') ? 'active' : '' }}">Data Services</a></li>
-                        <li><a href="#">SME Data</a></li>
+                        <li><a href="{{ route('admin.sme-data.index') }}" class="{{ request()->routeIs('admin.sme-data.index') ? 'active' : '' }}">SME Data</a></li>
                     </ul>
                 </li>
 
@@ -95,6 +95,7 @@
                         <li><a href="{{ route('ninipe.index') }}" class="{{ request()->routeIs('ninipe.*') ? 'active' : '' }}">NIN IPE</a></li>
                         <li><a href="{{ route('vnin-nibss.index') }}" class="{{ request()->routeIs('vnin-nibss.*') ? 'active' : '' }}">VNIN to NIBSS</a></li>
                         <li><a href="{{ route('nin-personalisation.index') }}" class="{{ request()->routeIs('nin-personalisation.*') ? 'active' : '' }}">NIN Personalisation</a></li>
+                        <li><a href="{{ route('first-account.index') }}" class="{{ request()->routeIs('first-account.*') ? 'active' : '' }}">Account opening</a></li>
                     </ul>
                 </li>
 
